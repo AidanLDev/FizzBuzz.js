@@ -12,11 +12,27 @@ fizzBuzzButonEl.addEventListener('click', () => {
 
 function fizzBuzz(num1, num2) {
   console.log(num1, num2);
-  for (i = 0; i <= 100; i++) {
-    // TODO: Check if fizzBuzzList is > 1 if so clear the list before running again
-    let output = document.createTextNode(i);
+  // Check if the fizzBuzz list has already been populated, if so empty the <ul>
+  while (fizzBuzzList.hasChildNodes()) {
+    fizzBuzzList.removeChild(fizzBuzzList.firstChild);
+  }
+  for (i = 1; i <= 100; i++) {
+    let output = '';
     let liNode = document.createElement('LI');
-    liNode.appendChild(output);
+
+    if (i % num1 === 0) {
+      output += 'Fizz ';
+    }
+    if (i % num2 === 0) {
+      output += 'Buzz';
+    }
+
+    if (output === '') {
+      output = i;
+    }
+
+    const listNode = document.createTextNode(output);
+    liNode.appendChild(listNode);
     fizzBuzzList.appendChild(liNode);
   }
 }
