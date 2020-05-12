@@ -5,14 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FizzBuzz</title>
     <script src="scripts/fizzBuzz.js" defer></script>
+    <link rel="stylesheet" href="/style/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <label for="number1">Enter first number</label>
-    <input id="number1" type="number" />
-    <label for="number2">Enter second number</label>
-    <input id="number2" type="number" />
-    <br />
-    <button id="fizzBuzzButton">FizzBuzz</button>
+    <header>
+      <h1>
+        <span class="fizz">Fizz</span> <span class="buzz">Buzz</span> -
+        JavaScript
+      </h1>
+    </header>
+    <main>
+      <div class="input-container">
+        <label for="number1">Enter first number</label>
+        <input id="number1" type="number" />
+        <label for="number2">Enter second number</label>
+        <input id="number2" type="number" />
+      </div>
+      <button id="fizzBuzzButton">FizzBuzz</button>
+    </main>
     <ul id="fizzList"></ul>
   </body>
 </html>
