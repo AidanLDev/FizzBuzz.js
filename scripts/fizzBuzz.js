@@ -11,14 +11,13 @@ fizzBuzzButonEl.addEventListener('click', () => {
 });
 
 function fizzBuzz(num1, num2) {
-  console.log(num1, num2);
   // Check if the fizzBuzz list has already been populated, if so empty the <ul>
   while (fizzBuzzList.hasChildNodes()) {
     fizzBuzzList.removeChild(fizzBuzzList.firstChild);
   }
   for (i = 1; i <= 100; i++) {
     let output = '';
-    let liNode = document.createElement('LI');
+    const liNode = document.createElement('LI');
 
     if (i % num1 === 0) {
       output += 'Fizz ';
@@ -33,6 +32,15 @@ function fizzBuzz(num1, num2) {
 
     const listNode = document.createTextNode(output);
     liNode.appendChild(listNode);
+    if (output === 'Fizz ') {
+      liNode.style.color = 'crimson';
+    }
+    if (output === 'Buzz') {
+      liNode.style.color = 'darkcyan';
+    }
+    if (output === 'Fizz Buzz') {
+      liNode.style.color = '#79792f';
+    }
     fizzBuzzList.appendChild(liNode);
   }
 }
