@@ -58,3 +58,8 @@ label {
   flex-wrap: wrap;
   list-style: none;
 }
+
+.socails {
+  position: absolute;
+  top: 20px;
+}
