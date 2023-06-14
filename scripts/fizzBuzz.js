@@ -1,10 +1,10 @@
-const fizzBuzzList = document.getElementById('fizzList');
-const fizzBuzzButonEl = document.getElementById('fizzBuzzButton');
+const fizzBuzzList = document.getElementById("fizzList");
+const fizzBuzzButonEl = document.getElementById("fizzBuzzButton");
 
-const num1El = document.getElementById('number1');
-const num2El = document.getElementById('number2');
+const num1El = document.getElementById("number1");
+const num2El = document.getElementById("number2");
 
-fizzBuzzButonEl.addEventListener('click', () => {
+fizzBuzzButonEl.addEventListener("click", () => {
   const num1 = num1El.value;
   const num2 = num2El.value;
   fizzBuzz(num1, num2);
@@ -16,30 +16,31 @@ function fizzBuzz(num1, num2) {
     fizzBuzzList.removeChild(fizzBuzzList.firstChild);
   }
   for (i = 1; i <= 100; i++) {
-    let output = '';
-    const liNode = document.createElement('LI');
+    let output = "";
+    const liNode = document.createElement("LI");
 
     if (i % num1 === 0) {
-      output += 'Fizz ';
+      output += "Fizz ";
     }
     if (i % num2 === 0) {
-      output += 'Buzz';
+      output += "Buzz";
     }
 
-    if (output === '') {
+    if (output === "") {
       output = i;
     }
 
     const listNode = document.createTextNode(output);
     liNode.appendChild(listNode);
-    if (output === 'Fizz ') {
-      liNode.style.color = 'crimson';
+    if (output === "Fizz ") {
+      liNode.style.color = "crimson";
     }
-    if (output === 'Buzz') {
-      liNode.style.color = 'darkcyan';
+    if (output === "Buzz") {
+      liNode.style.color = "darkcyan";
     }
-    if (output === 'Fizz Buzz') {
-      liNode.style.color = '#79792f';
+    if (output === "Fizz Buzz") {
+      liNode.style.color = "rgb(43 43 6)";
+      liNode.style.fontWeight = 600;
     }
     fizzBuzzList.appendChild(liNode);
   }
